@@ -51,3 +51,27 @@ generalInfo.innerHTML += Handlebars.templates.textbox({
                     ' useful during one of their earlier adventures with' +
                     ' the player/character to your right?)'
 });
+
+generalInfo.innerHTML += Handlebars.templates.textbox({
+    'id':           'stunt-1',
+    'label':        'Stunt 1',
+    'placeholder':  'Grapelling Hook Skills',
+    'description':  'What can your character do with a skill/approach ' +
+                    'better than everyone else?'
+});
+
+generalInfo.innerHTML += Handlebars.templates.textbox({
+    'id':           'stunt-2',
+    'label':        'Stunt 2',
+    'placeholder':  'Batmobile - Charriot of the Night',
+    'description':  'What can your character do with a skill/approach ' +
+                    'better than everyone else?'
+});
+
+generalInfo.innerHTML += Handlebars.templates.textbox({
+    'id':           'stunt-3',
+    'label':        'Stunt 3',
+    'placeholder':  'Punching Things Repeatedly',
+    'description':  'What can your character do with a skill/approach ' +
+                    'better than everyone else?'
+});
