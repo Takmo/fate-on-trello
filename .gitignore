@@ -1,6 +1,5 @@
 # do not commit node modules under any circumstances
-node
--modules/*
+node_modules/*
 
 # forget the lockfile
 package-lock.json
