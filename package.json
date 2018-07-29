@@ -4,7 +4,7 @@
   "description": "A Trello Power-Up for running Fate Core/Accelerated games.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "handlebars templates/* -f templates.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/takmo/fate-on-trello#readme",
   "dependencies": {
+    "handlebars": "^4.0.11",
     "http-server": "^0.11.1"
   }
 }

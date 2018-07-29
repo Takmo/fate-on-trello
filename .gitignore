@@ -3,3 +3,6 @@ node_modules/*
 
 # forget the lockfile
 package-lock.json
+
+# you should build the templates file
+templates.js

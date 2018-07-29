@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Character Builder | Fate on Trello</title>
+
+        <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css" />
+
+        <script src="handlebars.runtime.min.js"></script>
+        <script src="template-functions.js"></script>
+        <script src="templates.js"></script>
+    </head>
+
+    <body style="padding: 2em">
+        <div id="general-info">
+            <h1>Character Info</h1>
+            <!-- filled in via JS -->
+        </div>
+
+        <div id="core-skills">
+            <p>
+            Looking for something simpler?
+            <a onClick="">
+                Click here to switch to the Fate Accelerated approach system.
+            </a>
+            </p>
+
+        </div>
+
+        <div id="fae-skills" style="display: none">
+            <p>
+            Looking for something more feature-full?
+            <a onClick="">
+                Click here to switch to the Fate Core skill system.
+            </a>
+            </p>
+
+        </div>
+
+        <script src="character.js"></script>
+    </body>
+</html>
