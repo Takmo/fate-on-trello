@@ -11,3 +11,7 @@
     display: table;
     clear: both;
 }
+
+.fot-text-input {
+    max-width: 500px;
+}

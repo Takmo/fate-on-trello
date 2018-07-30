@@ -1,9 +1,11 @@
-function onTextboxFocus(id){
-    let description = document.getElementById(id + '-description');
-    description.style = "display: block";
-}
+var currentSelection = '';
 
-function onTextboxLeave(id){
-    let description = document.getElementById(id + '-description');
-    description.style = "display: none";
+function onTextboxFocus(id){
+    if(currentSelection !== '' && currentSelection !== id){
+        let lastSection = document.getElementById(currentSelection + '-hidden');
+        lastSection.style = "display: none";
+    }
+    let newSection = document.getElementById(id + '-hidden');
+    newSection.style = "display: block";
+    currentSelection = id;
 }

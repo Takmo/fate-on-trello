@@ -6,3 +6,6 @@ package-lock.json
 
 # you should build the templates file
 templates.js
+
+# lol no swap files
+**/.*.swp
