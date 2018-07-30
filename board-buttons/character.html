@@ -8,34 +8,30 @@
         <script src="template-functions.js"></script>
         <script src="templates.js"></script>
     </head>
-    <body style="padding: 2em">
-        <div class="row">
-            <div id="general-info" class="half-column">
-                <h2>Character Info</h2>
-                <!-- filled in via JS -->
-            </div>
-            <div id="skills-info" class="half-column">
-                <div id="core-skills">
-                    <h2>Character Skills</h2>
-                    <p>
-                    Looking for something simpler?
-                    <a onClick="switchAccelerated()">
-                        Click here to switch to the Fate Accelerated approach system.
-                    </a>
-                    </p>
-                    <!-- filled in via JS -->
-                </div>
-                <div id="fae-skills" style="display: none">
-                    <h2>Character Approaches</h2>
-                    <p>
-                    Looking for something more feature-full?
-                    <a onClick="switchCore()">
-                        Click here to switch to the Fate Core skill system.
-                    </a>
-                    </p>
-                    <!-- filled in via JS -->
-                </div>
-            </div>
+    <body>
+        <div id="general-info" class="character-section">
+            <h2>Character Info</h2>
+            <!-- filled in via JS -->
+        </div>
+        <div id="core-skills" class="character-section">
+            <h2>Character Skills</h2>
+            <p>
+            Looking for something simpler?
+            <a onClick="switchAccelerated()">
+                Click here to switch to the Fate Accelerated approach system.
+            </a>
+            </p>
+            <!-- filled in via JS -->
+        </div>
+        <div id="fae-skills" class="character-section" style="display: none">
+            <h2>Character Approaches</h2>
+            <p>
+            Looking for something more feature-full?
+            <a onClick="switchCore()">
+                Click here to switch to the Fate Core skill system.
+            </a>
+            </p>
+            <!-- filled in via JS -->
         </div>
         <script src="character.js"></script>
     </body>
