@@ -2,40 +2,41 @@
 <html>
     <head>
         <title>Character Builder | Fate on Trello</title>
-
         <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css" />
-
+        <link rel="stylesheet" href="character.css" />
         <script src="handlebars.runtime.min.js"></script>
         <script src="template-functions.js"></script>
         <script src="templates.js"></script>
     </head>
-
     <body style="padding: 2em">
-        <div id="general-info">
-            <h1>Character Info</h1>
-            <!-- filled in via JS -->
+        <div class="row">
+            <div id="general-info" class="half-column">
+                <h2>Character Info</h2>
+                <!-- filled in via JS -->
+            </div>
+            <div id="skills-info" class="half-column">
+                <div id="core-skills">
+                    <h2>Character Skills</h2>
+                    <p>
+                    Looking for something simpler?
+                    <a onClick="">
+                        Click here to switch to the Fate Accelerated approach system.
+                    </a>
+                    </p>
+                    <!-- filled in via JS -->
+                </div>
+                <div id="fae-skills" style="display: none">
+                    <h2>Character Approaches</h2>
+                    <p>
+                    Looking for something more feature-full?
+                    <a onClick="">
+                        Click here to switch to the Fate Core skill system.
+                    </a>
+                    </p>
+                    <!-- filled in via JS -->
+                </div>
+            </div>
         </div>
-
-        <div id="core-skills">
-            <p>
-            Looking for something simpler?
-            <a onClick="">
-                Click here to switch to the Fate Accelerated approach system.
-            </a>
-            </p>
-
-        </div>
-
-        <div id="fae-skills" style="display: none">
-            <p>
-            Looking for something more feature-full?
-            <a onClick="">
-                Click here to switch to the Fate Core skill system.
-            </a>
-            </p>
-
-        </div>
-
         <script src="character.js"></script>
     </body>
 </html>
