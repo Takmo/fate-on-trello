@@ -96,6 +96,30 @@ faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Forceful'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Quick'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Sneaky'});
 
+function continueEditing(){
+    document.getElementById('result-div').style = "display: none";
+    document.getElementById('form-div').style = "";
+}
+
+function generateMarkdown(){
+    // first create Markdown
+
+    // then switch display
+    document.getElementById('form-div').style = "display: none";
+    document.getElementById('result-div').style = "";
+}
+
+function copyDescription(){
+    document.getElementById('result').select();
+    document.execCommand('copy');
+
+    let button = document.getElementById('copy-description');
+    button.innerHTML = "Copied!";
+    window.setTimeout(function(){
+        button.innerHTML = "Copy to Clipboard";
+    }, 3000);
+}
+
 function switchAccelerated(){
     document.getElementById('core-skills').style = "display: none";
     document.getElementById('fae-skills').style = "";

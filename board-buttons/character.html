@@ -9,33 +9,50 @@
         <script src="templates.js"></script>
     </head>
     <body>
-        <div id="general-info" class="character-section">
-            <h2>Character Info</h2>
-            <!-- filled in via JS -->
+        <div id="form-div">
+            <div id="general-info" class="character-section">
+                <h2>Character Info</h2>
+                <!-- filled in via JS -->
+            </div>
+            <div id="core-skills" class="character-section">
+                <h2>Character Skills</h2>
+                <p>
+                Looking for something simpler?
+                <a onClick="switchAccelerated()">
+                    Click here to switch to the Fate Accelerated approach system.
+                </a>
+                </p>
+                <!-- filled in via JS -->
+            </div>
+            <div id="fae-skills" class="character-section" style="display: none">
+                <h2>Character Approaches</h2>
+                <p>
+                Looking for something more feature-full?
+                <a onClick="switchCore()">
+                    Click here to switch to the Fate Core skill system.
+                </a>
+                </p>
+                <!-- filled in via JS -->
+            </div>
+            <div id="extra-info" class="character-section">
+                <h2>Anything else we should know?</h2>
+                <textarea id="additional-information" placeholder="This is totally optional. Use if needed :)"></textarea>
+            </div>
+            <div id="confirm" class="character-section">
+                <h2>All done? Let's get to it!</h2>
+                <button id="get-markdown" onclick="generateMarkdown()" class="mod-primary">Build Character</button>
+            </div>
         </div>
-        <div id="core-skills" class="character-section">
-            <h2>Character Skills</h2>
-            <p>
-            Looking for something simpler?
-            <a onClick="switchAccelerated()">
-                Click here to switch to the Fate Accelerated approach system.
-            </a>
-            </p>
-            <!-- filled in via JS -->
-        </div>
-        <div id="fae-skills" class="character-section" style="display: none">
-            <h2>Character Approaches</h2>
-            <p>
-            Looking for something more feature-full?
-            <a onClick="switchCore()">
-                Click here to switch to the Fate Core skill system.
-            </a>
-            </p>
-            <!-- filled in via JS -->
-        </div>
-        <div id="extra-info" class="character-section">
-            <h2>Anything else we should know?</h2>
-            <textarea id="additional-information" placeholder="This is totally optional. Use if needed :)"></textarea>
+        <div id="result-div" style="display: none">
+            <div class="character-section">
+                <h2>Here's your character's Markdown description...</h2>
+                <p>
+                Now just copy and paste this into your character's card.
+                </p>
+                <textarea id="result">sample text</textarea>
+                <button id="copy-description" class="mod-primary" onclick="copyDescription()">Copy to Clipboard</button>
+                <button id="edit-again" onclick="continueEditing()">Let me change something...</button>
+            </div>
         </div>
         <script src="character.js"></script>
     </body>
