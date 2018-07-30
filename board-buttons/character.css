@@ -1,0 +1,13 @@
+.half-column {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 1em;
+}
+
+/* clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
