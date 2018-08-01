@@ -1,8 +1,45 @@
 /* global Handlebars */
 
+/* general functions */
+function copyDescription(){
+    document.getElementById('result').select();
+    document.execCommand('copy');
+
+    let button = document.getElementById('copy-description');
+    button.innerHTML = "Copied!";
+    window.setTimeout(function(){
+        button.innerHTML = "Copy to Clipboard";
+    }, 3000);
+}
+
+function generateMarkdown(){
+
+}
+
+/* page navigation functions */
+function switchToCoreSkills(){
+    document.getElementById('fae-skills').style = "display: none";
+    document.getElementById('core-skills').style = "";
+}
+
+function switchToFaeSkills(){
+    document.getElementById('core-skills').style = "display: none";
+    document.getElementById('fae-skills').style = "";
+}
+
+function switchToForm(){
+    document.getElementById('result-div').style = "display: none";
+    document.getElementById('form-div').style = "";
+}
+
+function switchToResults(){
+    generateMarkdown();
+    document.getElementById('form-div').style = "display: none";
+    document.getElementById('result-div').style = "";
+}
+
+/* fill in general information prompts */
 var generalInfo = document.getElementById("general-info")
-var coreSkills = document.getElementById("core-skills")
-var faeSkills = document.getElementById("fae-skills")
 
 generalInfo.innerHTML += Handlebars.templates.textbox({
     'id':           'name',
@@ -70,6 +107,9 @@ generalInfo.innerHTML += Handlebars.templates.textbox({
                     'better than everyone else?'
 });
 
+/* fill in core skills */
+var coreSkills = document.getElementById("core-skills")
+
 coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Athletics'});
 coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Burglary'});
 coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Contacts'});
@@ -89,43 +129,12 @@ coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Shoot'});
 coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Stealth'});
 coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Will'});
 
+/* fill in FAE skills */
+var faeSkills = document.getElementById("fae-skills")
+
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Careful'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Clever'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Flashy'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Forceful'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Quick'});
 faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Sneaky'});
-
-function continueEditing(){
-    document.getElementById('result-div').style = "display: none";
-    document.getElementById('form-div').style = "";
-}
-
-function generateMarkdown(){
-    // first create Markdown
-
-    // then switch display
-    document.getElementById('form-div').style = "display: none";
-    document.getElementById('result-div').style = "";
-}
-
-function copyDescription(){
-    document.getElementById('result').select();
-    document.execCommand('copy');
-
-    let button = document.getElementById('copy-description');
-    button.innerHTML = "Copied!";
-    window.setTimeout(function(){
-        button.innerHTML = "Copy to Clipboard";
-    }, 3000);
-}
-
-function switchAccelerated(){
-    document.getElementById('core-skills').style = "display: none";
-    document.getElementById('fae-skills').style = "";
-}
-
-function switchCore(){
-    document.getElementById('fae-skills').style = "display: none";
-    document.getElementById('core-skills').style = "";
-}
