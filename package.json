@@ -4,7 +4,7 @@
   "description": "A Trello Power-Up for running Fate Core/Accelerated games.",
   "main": "index.js",
   "scripts": {
-    "build": "handlebars templates/* -f templates.js"
+    "build": "handlebars board-buttons/templates/* -f board-buttons/templates.js"
   },
   "repository": {
     "type": "git",
