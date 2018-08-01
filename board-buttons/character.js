@@ -4,6 +4,8 @@
 var generalInfo = document.getElementById("general-info")
 var coreSkills = document.getElementById("core-skills")
 var faeSkills = document.getElementById("fae-skills")
+var faeSkills = document.getElementById("fae-skills")
+var characterStunts = document.getElementById('character-stunts');
 
 /* general functions */
 function copyDescription(){
@@ -138,27 +140,6 @@ generalInfo.innerHTML += Handlebars.templates.aspect({
     ' useful during one of their earlier adventures with' +
     ' the player/character to your right?)'
 });
-generalInfo.innerHTML += Handlebars.templates.aspect({
-    'id':           'stunt-1',
-    'label':        'Stunt 1',
-    'placeholder':  'Grapelling Hook Skills',
-    'description':  'What can your character do with a skill/approach ' +
-    'better than everyone else?'
-});
-generalInfo.innerHTML += Handlebars.templates.aspect({
-    'id':           'stunt-2',
-    'label':        'Stunt 2',
-    'placeholder':  'Batmobile - Charriot of the Night',
-    'description':  'What can your character do with a skill/approach ' +
-    'better than everyone else?'
-});
-generalInfo.innerHTML += Handlebars.templates.aspect({
-    'id':           'stunt-3',
-    'label':        'Stunt 3',
-    'placeholder':  'Punching Things Repeatedly',
-    'description':  'What can your character do with a skill/approach ' +
-    'better than everyone else?'
-});
 
 /* fill in core skills */
 coreSkills.innerHTML += Handlebars.templates.skill({
@@ -258,4 +239,27 @@ faeSkills.innerHTML += Handlebars.templates.skill({
 faeSkills.innerHTML += Handlebars.templates.skill({
     'id': 'Sneaky',
     'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+
+/* fill in the stunts section */
+characterStunts.innerHTML += Handlebars.templates.aspect({
+    'id':           'stunt-1',
+    'label':        'Stunt 1',
+    'placeholder':  'Grapelling Hook Skills',
+    'description':  'What can your character do with a skill/approach ' +
+    'better than everyone else?'
+});
+characterStunts.innerHTML += Handlebars.templates.aspect({
+    'id':           'stunt-2',
+    'label':        'Stunt 2',
+    'placeholder':  'Batmobile - Charriot of the Night',
+    'description':  'What can your character do with a skill/approach ' +
+    'better than everyone else?'
+});
+characterStunts.innerHTML += Handlebars.templates.aspect({
+    'id':           'stunt-3',
+    'label':        'Stunt 3',
+    'placeholder':  'Punching Things Repeatedly',
+    'description':  'What can your character do with a skill/approach ' +
+    'better than everyone else?'
 });
