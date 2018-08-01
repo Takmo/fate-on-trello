@@ -1,5 +1,7 @@
 <div class="skill-selector">
-    <label for="skill-{{id}}">{{id}}</label>
+    <a href="{{link}}" target="_blank">
+        <label for="skill-{{id}}">{{id}}</label>
+    </a>
     <input id="skill-{{id}}" type="hidden" value="Mediocre (+0)" />
     <button id="skill-{{id}}-0" onclick="onSkillSelect('{{id}}', 0)" class="mod-primary">Mediocre (+0)</button>
     <button id="skill-{{id}}-1" onclick="onSkillSelect('{{id}}', 1)">Average (+1)</button>

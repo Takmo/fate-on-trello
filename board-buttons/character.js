@@ -62,6 +62,12 @@ function generateMarkdown(){
     md += aspectToMarkdown('stunt-2');
     md += aspectToMarkdown('stunt-3');
 
+    let extra = document.getElementById('additional-information');
+    if (extra.value !== ''){
+        md += '## Additional Information\n\n';
+        md += extra.value;
+    }
+
     document.getElementById('result').value = md;
 }
 
@@ -155,29 +161,101 @@ generalInfo.innerHTML += Handlebars.templates.aspect({
 });
 
 /* fill in core skills */
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Athletics'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Burglary'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Contacts'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Crafts'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Deceive'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Drive'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Empathy'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Fight'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Investigate'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Lore'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Notice'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Physique'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Provoke'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Rapport'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Resources'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Shoot'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Stealth'});
-coreSkills.innerHTML += Handlebars.templates.skill({'id': 'Will'});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Athletics',
+    'link': 'https://fate-srd.com/fate-core/athletics'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Burglary',
+    'link': 'https://fate-srd.com/fate-core/burglary'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Contacts',
+    'link': 'https://fate-srd.com/fate-core/contacts'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Crafts',
+    'link': 'https://fate-srd.com/fate-core/crafts'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Deceive',
+    'link': 'https://fate-srd.com/fate-core/deceive'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Drive',
+    'link': 'https://fate-srd.com/fate-core/drive'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Empathy',
+    'link': 'https://fate-srd.com/fate-core/empathy'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Fight',
+    'link': 'https://fate-srd.com/fate-core/fight'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Investigate',
+    'link': 'https://fate-srd.com/fate-core/investigate'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Lore',
+    'link': 'https://fate-srd.com/fate-core/lore'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Notice',
+    'link': 'https://fate-srd.com/fate-core/notice'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Physique',
+    'link': 'https://fate-srd.com/fate-core/physique'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Provoke',
+    'link': 'https://fate-srd.com/fate-core/provoke'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Rapport',
+    'link': 'https://fate-srd.com/fate-core/rapport'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Resources',
+    'link': 'https://fate-srd.com/fate-core/resources'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Shoot',
+    'link': 'https://fate-srd.com/fate-core/shoot'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Stealth',
+    'link': 'https://fate-srd.com/fate-core/stealth'
+});
+coreSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Will',
+    'link': 'https://fate-srd.com/fate-core/will'
+});
 
 /* fill in FAE skills */
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Careful'});
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Clever'});
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Flashy'});
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Forceful'});
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Quick'});
-faeSkills.innerHTML += Handlebars.templates.skill({'id': 'Sneaky'});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Careful',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Clever',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Flashy',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Forceful',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Quick',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
+faeSkills.innerHTML += Handlebars.templates.skill({
+    'id': 'Sneaky',
+    'link': 'https://fate-srd.com/fate-accelerated/how-do-stuff-outcomes-actions-and-approaches#choose-your-approach'
+});
