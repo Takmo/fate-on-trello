@@ -99,25 +99,25 @@ function switchToResults(){
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'name',
     'label':        'Name',
-    'placeholder':  'e.g.: Batman, Bobanthy, Kob???',
+    'placeholder':  'Princess Anna of Arendelle',
     'description':  'A good name makes for a great character!'
 });
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'high-concept',
     'label':        'High Concept',
-    'placeholder':  'Eccentric Billionaire by Day, Masked Vigillante by Night',
+    'placeholder':  'Excitable Princess of a Snow-Cursed Kingdom',
     'description':  'If you had to describe your character in a single phrase, what would it be?'
 });
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'trouble',
     'label':        'Trouble',
-    'placeholder':  'Cannot Pull the Trigger / Will Not Kill',
+    'placeholder':  'We just met - of course I trust you!',
     'description':  'What keeps getting your character into trouble?'
 });
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'aspect-1',
     'label':        'Additional Aspect',
-    'placeholder':  'Has Friends in the Police Force',
+    'placeholder':  'My sister the Snow Queen is missing',
     'description':  'Tell us something meaningful about your character. ' +
     '(PRO TIP: what aspect about your character proved' +
     ' useful during one of their earlier adventures alone?)'
@@ -125,7 +125,7 @@ generalInfo.innerHTML += Handlebars.templates.aspect({
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'aspect-2',
     'label':        'Additional Aspect',
-    'placeholder':  'Always Has the Coolest Gadgets',
+    'placeholder':  'I like everybody, and everybody likes me',
     'description':  'Tell us something meaningful about your character. ' +
     '(PRO TIP: what aspect about your character proved' +
     ' useful during one of their earlier adventures with' +
@@ -134,7 +134,7 @@ generalInfo.innerHTML += Handlebars.templates.aspect({
 generalInfo.innerHTML += Handlebars.templates.aspect({
     'id':           'aspect-3',
     'label':        'Additional Aspect',
-    'placeholder':  'Demands Justice in a City Under Fire',
+    'placeholder':  "A little bit of snow doesn't scare me!",
     'description':  'Tell us something meaningful about your character. ' +
     '(PRO TIP: what aspect about your character proved' +
     ' useful during one of their earlier adventures with' +
@@ -245,21 +245,21 @@ faeSkills.innerHTML += Handlebars.templates.skill({
 characterStunts.innerHTML += Handlebars.templates.aspect({
     'id':           'stunt-1',
     'label':        'Stunt 1',
-    'placeholder':  'Grapelling Hook Skills',
+    'placeholder':  'Singing Solves my Problems',
     'description':  'What can your character do with a skill/approach ' +
     'better than everyone else?'
 });
 characterStunts.innerHTML += Handlebars.templates.aspect({
     'id':           'stunt-2',
     'label':        'Stunt 2',
-    'placeholder':  'Batmobile - Charriot of the Night',
+    'placeholder':  'Do you want to [fight] a snowman?',
     'description':  'What can your character do with a skill/approach ' +
     'better than everyone else?'
 });
 characterStunts.innerHTML += Handlebars.templates.aspect({
     'id':           'stunt-3',
     'label':        'Stunt 3',
-    'placeholder':  'Punching Things Repeatedly',
+    'placeholder':  'Dancing Through the Night',
     'description':  'What can your character do with a skill/approach ' +
     'better than everyone else?'
 });
